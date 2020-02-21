@@ -8,7 +8,7 @@
 <!-- association -->
 - has_many :messages
 - has_many :groups, through: :users_groups
-- has_many :users_group
+- has_many :users_groups
 
 <!-- users_groupテーブル -->
 |colimn|Type|Options|
@@ -25,7 +25,7 @@
 |name|string|null: false|
 <!-- association -->
 - has_many :messages
-- has_many :users, through: :users_group
+- has_many :users, through: :users_groups
 - has_many :users_groups
 
 <!-- messagesテーブル -->
