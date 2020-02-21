@@ -13,8 +13,8 @@
 <!-- users_groupテーブル -->
 |colimn|Type|Options|
 |------|----|-------|
-|user_id|interger|null:false, foreign_key: true|
-|group_id|interger|null: false, foreign_key: true|
+|user_id|reference|null:false, foreign_key: true|
+|group_id|reference|null: false, foreign_key: true|
 <!-- association -->
 - belongs_to :user
 - belongs_to :group
@@ -33,8 +33,8 @@
 |------|----|-------|
 |text|text|
 |picture|text|
-|user_id|interger|null:false, foreign_key: true|
-|group_id|interger|null: false, foreign_key: true|
+|user_id|reference|null:false, foreign_key: true|
+|group_id|reference|null: false, foreign_key: true|
 <!-- association -->
 - belongs_to :user
 - belongs_to :group
