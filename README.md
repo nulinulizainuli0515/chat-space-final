@@ -8,9 +8,9 @@
 <!-- association -->
 - has_many :messages
 - has_many :groups, through: :users_groups
-- has_many :users_
+- has_many :users_groups
 
-<!-- users_groupテーブル -->
+<!-- users_groupsテーブル -->
 |colimn|Type|Options|
 |------|----|-------|
 |user_id|reference|null:false, foreign_key: true|
