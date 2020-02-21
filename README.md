@@ -6,11 +6,11 @@
 |email|string|null: false|
 |password|string|null: false| 
 <!-- association -->
-- belongs_to :chat
-- has_many :users_id
-- has_many :groups, through: :users_id
+- has_many :messages
+- has_many :groups, through: :users_groups
+- has_many :users_group
 
-<!-- users_idテーブル -->
+<!-- users_groupテーブル -->
 |colimn|Type|Options|
 |------|----|-------|
 |user_id|interger|null:false, foreign_key: true|
@@ -24,15 +24,18 @@
 |------|----|-------|
 |name|string|null: false|
 <!-- association -->
-- belongs_to :chat
-- has_many :users, through: :users_id
+- has_many :messages
+- has_many :users, through: :users_group
+- has_many :users_groups
 
-<!-- chatテーブル -->
+<!-- messagesテーブル -->
 |colimn|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|picture|picture|null: false|
+|text|text|
+|picture|text|
+|user_id|interger|null:false, foreign_key: true|
+|group_id|interger|null: false, foreign_key: true|
 <!-- association -->
-- has_many :users
-- has_many :groups
+- belongs_to :user
+- belongs_to :group
 
