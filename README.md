@@ -16,8 +16,8 @@
 |user_id|interger|null:false, foreign_key: true|
 |group_id|interger|null: false, foreign_key: true|
 <!-- association -->
-- belongs_to :users
-- belongs_to :groups
+- belongs_to :user
+- belongs_to :group
 
 <!-- groupsテーブル -->
 |colimn|Type|Options|
