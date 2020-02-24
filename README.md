@@ -19,6 +19,7 @@
 - belongs_to :user
 - belongs_to :group
 
+
 <!-- groupsテーブル -->
 |colimn|Type|Options|
 |------|----|-------|
