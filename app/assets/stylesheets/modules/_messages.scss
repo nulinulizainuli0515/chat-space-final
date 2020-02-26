@@ -1,3 +1,5 @@
+$white-color: #ffffff;
+$maun-width: calc(100vw - 300px);
 * {
   box-sizing: border-box;
 }
@@ -9,58 +11,159 @@
     width: 300px;
     height: 100%;
     background-color: #253141;
-      &-header {
-        height: 100px;
-        width: 300px;
-        background-color: #253141;
+    color: $white-color;
+    font-weight: bold;
+    &-header {
+      height: 100px;
+      width: 300px;
+      background-color: #253141;
+      display: flex;
+      align-items: center;
+      .side-box {
+        width: 260px;
+        height: 20px;
+        margin: 0 20px;
         display: flex;
-        align-items: center;
-        .side-box {
-          width: 260px;
-          height: 20px;
-          margin: 0 20px;
-          display: flex;
-          justify-content:space-between;
-          &__name {
-            color: #fff;
-            font-size: 16px;
-          }
-          &__icon {
-            .side-btn {
-              text-decoration: none;
-              margin-left: 5px;
-              &__icon {
-                color: #ffffff;
-              }
+        justify-content:space-between;
+        &__name {
+          font-size: 16px;
+        }
+        &__icon {
+          .side-btn {
+            text-decoration: none;
+            margin-left: 5px;
+            &__icon {
+              color: $white-color;
             }
           }
         }
       }
-
-      &-groups {
+    }
+    &-groups {
+      height: calc( 100vh - 100px);
+      background-color: #2f3e51;
+      padding: 20px;
+      .group {
         width: 300px;
-        height: calc( 100vh - 100px);
-        background-color: #2f3e51;
-      }
-  }
-
+        margin-bottom: 40px;
+        cursor: pointer;
+        &__name {
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+        &__message {
+          font-size: 11px;
+        }
+      }  
+    }
+  }  
   .main {
-    width: calc( 100vw - 300px);
-    height: 100%;
-    background-color: #fafafa;
-      &-header {
-      height: 100px;
-      background-color: #ffffff;
-      border-bottom: 1px #eeeeee solid;
+  width: $maun-width;
+  height: 100%;
+    &-header {
+    height: 100px;
+    width: $maun-width;
+    background-color: $white-color;
+    border-bottom: 1px #eeeeee solid;
+    display: flex;
+    justify-content: space-between;
+      &__message {
+      padding: 35px 0 0 40px;
+      box-sizing: border-box;
+        &-group {
+        font-size: 20px;
+        color: #333333; 
+        }
+        &-name {
+          padding-top: 15px;
+          font-size: 12px;
+          color: #999999;
+          display: flex;
+        }
       }
-      &-message {
-      height: calc( 100vh - 190px);
-      width: calc( 100vw - 300px);
-      background-color: #fafafa;
+      &__edit__btn {
+      margin: 28px 40px 0 0;
+      width: 72px;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      border : solid 1px #38aef3;
+      font-size: 16px;
+      cursor: pointer;
+      .edit__btn{
+      line-height: 40px;
+      font-size: 16px;
+      text-decoration: none;
+      color: #38aef3;
       }
-      &-form {
+      }
+    }
+    &-text{
+    height: calc( 100vh - 190px);
+    width: $maun-width;
+    padding: 35px 40px;
+      &__member {
+      display: flex;
+      justify-content:start;
+        &__user {
+        color: #333333;
+        font-size: 16px;
+        }
+        &__date {
+        margin-left: 5px;
+        color: #999;
+        font-size: 12px;
+        }
+      }
+      &__title {
+      margin-top: 12px;
+      height: 46px;
+      font-size: 14px;
+      }
+    }
+    &-form{
+      padding: 20px 40px;
+      width: $maun-width;
       height: 90px;
       background-color: #d2d2d2;
+      &__box {
+        display: flex;
+        width: calc(100vw - 380px);
+        height: 50px;
+        &__picture {
+          position: relative;
+          &__new {
+          background-color: $white-color;
+          padding: 0 10px;
+          
+          width: calc(100vw - 500px);
+          height: 50px;
+          }
+          &__icons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            // top: calc( 100vh - 53px);
+            // right: 145px;
+            .icon {
+              display: none;
+            }
+          }
+        }
+        .main-form__send {
+          background-color: #38aef3;
+          text-align: center;
+          height: 50px;
+          line-height: 50px;
+          width: 120px;
+          margin-left: 15px;
+          cursor: pointer;
+          &__btn {
+          text-decoration: none;
+          color: #d2d2d2;
+          }
+        }
       }
+    }
   }
 }
