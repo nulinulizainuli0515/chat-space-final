@@ -1,0 +1,42 @@
+-# <チャット画面>
+.main
+  .main-header
+    .main-header__message
+      .main-header__message-group
+        test
+      .main-header__message-name
+        Member：
+        .main-header__message-name__list
+          masa
+    .main-header__edit
+      .main-header__edit__btn
+        = link_to "#", class:"edit__btn" do
+          Edit
+
+
+  .main-text
+    .main-text__member
+      .main-text__member__user
+        masa 
+      .main-text__member__date
+        2020/02/25
+    .main-text__title
+      おはよう
+    .main-text__member
+      .main-text__member__user
+        masa 
+      .main-text__member__date
+        2020/02/25
+    .main-text__title
+      おはよう
+
+  .main-form
+    .main-form__box
+      .main-form__box__picture
+        %input{type: "text", class: "main-form__box__picture__new", placeholder: 'type a message'}
+          %label{class: "main-form__box__picture__icons"}
+            = icon('fas', 'image')
+            %input{type: "file", class: "icon"}
+      .main-form__send
+        = link_to "#", class:"main-form__send__btn" do
+          send
