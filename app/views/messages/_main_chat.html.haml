@@ -32,11 +32,16 @@
 
   .main-form
     .main-form__box
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
       .main-form__box__picture
-        %input{type: "text", class: "main-form__box__picture__new", placeholder: 'type a message'}
-          %label{class: "main-form__box__picture__icons"}
-            = icon('fas', 'image')
-            %input{type: "file", class: "icon"}
+        = f.label :image,class: 'main-form__box__picture__new' do
+          = icon('fas', 'image', class: 'icon')
+          = file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'main-form__box__picture__icons'  
       .main-form__send
         = link_to "#", class:"main-form__send__btn" do
           send
+  
+  .messages
+    = render partial: 'message', collection: @messages
