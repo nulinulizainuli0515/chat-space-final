@@ -31,17 +31,13 @@
       おはよう
 
   .main-form
-    .main-form__box
     = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-      .main-form__box__picture
-        = f.label :image,class: 'main-form__box__picture__new' do
+      .comment-box
+        = f.text_field :content, class: 'comment-box__text', placeholder: 'type a message' 
+        = f.label :image,class: 'comment-box__image' do
           = icon('fas', 'image', class: 'icon')
-          = file_field :image, class: 'hidden'
-      = f.submit 'Send', class: 'main-form__box__picture__icons'  
-      .main-form__send
-        = link_to "#", class:"main-form__send__btn" do
-          send
+          =f.file_field :image, class: 'hidden'
+      = f.submit 'send', class: "main-btn"  
+    
+
   
-  .messages
-    = render partial: 'message', collection: @messages
