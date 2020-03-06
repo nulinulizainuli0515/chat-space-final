@@ -3,32 +3,19 @@
   .main-header
     .main-header__message
       .main-header__message-group
-        test
+        =@group.name
       .main-header__message-name
         Member：
         .main-header__message-name__list
-          masa
+          -# - @group.users each do |user| 
+          -#   = user.name
     .main-header__edit
       .main-header__edit__btn
         = link_to "#", class:"edit__btn" do
           Edit
-
-
+          
   .main-text
-    .main-text__member
-      .main-text__member__user
-        masa 
-      .main-text__member__date
-        2020/02/25
-    .main-text__title
-      おはよう
-    .main-text__member
-      .main-text__member__user
-        masa 
-      .main-text__member__date
-        2020/02/25
-    .main-text__title
-      おはよう
+    = render @messages
 
   .main-form
     = form_for [@group, @message] do |f|
