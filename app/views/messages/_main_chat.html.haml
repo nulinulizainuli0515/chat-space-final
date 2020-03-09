@@ -7,13 +7,12 @@
       .main-header__message-name
         Member：
         .main-header__message-name__list
-          -# - @group.users each do |user| 
-          -#   = user.name
+          -@group.group_users.each do |u| 
+            = u.user.name
     .main-header__edit
       .main-header__edit__btn
-        = link_to "#", class:"edit__btn" do
-          Edit
-          
+        = link_to edit_group_path(@group), class:"edit__btn" do
+          edit
   .main-text
     = render @messages
 

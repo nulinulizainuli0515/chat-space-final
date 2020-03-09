@@ -106,25 +106,31 @@ $maun-width: calc(100vw - 300px);
     &-text{
     height: calc( 100vh - 190px);
     width: $maun-width;
-    padding: 35px 40px;
-      &__member {
-      display: flex;
-      justify-content:start;
-        &__user {
-        color: #333333;
-        font-size: 16px;
-        }
-        &__date {
-        margin-left: 5px;
-        color: #999;
-        font-size: 12px;
-        }
+    padding: 40px;
+    overflow: scroll;
+    .messages {
+      .upper-message {
+        display: flex;
+        justify-content:start;
+          .upper-message__user-name {
+            color: #333333;
+            font-size: 16px;
+          } 
+          .upper-message__date {
+          margin-left: 5px;
+          color: #999;
+          font-size: 12px;
+          }
       }
-      &__title {
-      margin-top: 12px;
-      height: 46px;
-      font-size: 14px;
+      .lower-message {
+        padding-top: 12px;
+        padding-bottom: 46px;
+        height: 46px;
+        font-size: 14px;
       }
+    }
+
+      
     }
     .main-form{
       padding: 20px 40px;
