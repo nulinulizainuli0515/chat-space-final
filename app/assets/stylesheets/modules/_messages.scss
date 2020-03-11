@@ -50,6 +50,9 @@ $maun-width: calc(100vw - 300px);
         width: 300px;
         margin-bottom: 40px;
         cursor: pointer;
+        a {
+          text-decoration: none;
+        }
         &__name {
           font-size: 15px;
           margin-bottom: 5px;
@@ -109,6 +112,7 @@ $maun-width: calc(100vw - 300px);
     padding: 40px;
     overflow: scroll;
     .messages {
+      flex-direction: column;
       .upper-message {
         display: flex;
         justify-content:start;
@@ -123,10 +127,16 @@ $maun-width: calc(100vw - 300px);
           }
       }
       .lower-message {
-        padding-top: 12px;
-        padding-bottom: 46px;
-        height: 46px;
+      padding-top: 12px;
+      padding-bottom: 46px;
+        .lower-message__content {
         font-size: 14px;
+        color: #434a45;
+        }
+        .lower-message__image {
+        height: 100px;
+        width: 100px;
+        }
       }
     }
 
