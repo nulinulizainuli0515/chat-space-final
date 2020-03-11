@@ -50,17 +50,17 @@ $maun-width: calc(100vw - 300px);
         width: 300px;
         margin-bottom: 40px;
         cursor: pointer;
-        text-decoration: none;
+        a {
+          text-decoration: none;
+        }
         &__name {
           font-size: 15px;
           margin-bottom: 5px;
           color: #ffffff;
-          text-decoration: none;
         }
         &__message {
           font-size: 11px;
           color: #ffffff;
-          text-decoration: none;
         }
       }  
     }
